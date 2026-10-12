@@ -22,8 +22,8 @@ def load_image_as_tensor(path, target_size=(512, 512)):
     ])
     img_tensor = transform(img_pil).unsqueeze(0).to(device)
     return img_tensor
-content_path = os.path.join( "picture", "xueshan.jpg")
-style_path   = os.path.join( "picture", "shuilian.jpg")
+content_path = os.path.join( "picture", "content.jpg")
+style_path   = os.path.join( "picture", "style.jpg")
 
 content_t = load_image_as_tensor(content_path, target_size=(1024, 1024))
 style_t   = load_image_as_tensor(style_path,   target_size=(1024, 1024))
